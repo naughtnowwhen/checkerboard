@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+</head>
+<body>
+
+  <div class="container">
+    <p>testing</p>
+
+    <!-- <div class="row">  -->
+
+      {% for j in range (0, y) %}
+
+      <div class="row">
+        {% for i in range (0, x) %}
+        <div class=" {% if  (i % 2 == 1) %} odd" style='background-color:{{colorA}}' {% endif %}
+  
+          {% if  (i % 2 == 0) %}
+          even" style='background-color:{{colorB}}' 
+          {% endif %}
+  
+        >
+          rowtest
+        </div>
+    
+        {% endfor %}
+      </div>
+
+      {% endfor %}
+
+
+
+
+
+    <!-- </div> -->
+
+
+  </div>
+  
+  <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"> -->
+
+</body>
+</html>
